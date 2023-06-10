@@ -36,6 +36,10 @@ class _LoginPage extends State<LoginPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            Padding(
+                padding: EdgeInsets.only(
+              top: 30,
+            )),
             Image.asset(
               "assets/images/pic.PNG",
               height: 46.h,
@@ -75,21 +79,21 @@ class _LoginPage extends State<LoginPage> {
                               color: Color(
                                 0xffffffff,
                               ),
-                              fontSize: 16.sp),
+                              fontSize: 18.sp),
                         ),
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: 3.h,
+                    height: 4.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         "Or Sign Up with",
-                        style: TextStyle(
-                            fontSize: 14.sp, color: Color(0xffFFFFFF)),
+                        style:
+                            TextStyle(fontSize: 16.sp, color: Colors.white70),
                       )
                     ],
                   ),
@@ -161,15 +165,15 @@ class _LoginPage extends State<LoginPage> {
                     ],
                   ),
                   SizedBox(
-                    height: 6.h,
+                    height: 7.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         "Already have an account?",
-                        style: TextStyle(
-                            color: Color(0xffFFFFFF), fontSize: 15.sp),
+                        style:
+                            TextStyle(color: Colors.white70, fontSize: 17.sp),
                       ),
                       SizedBox(
                         width: 1.w,
@@ -178,7 +182,7 @@ class _LoginPage extends State<LoginPage> {
                         "Sign in now",
                         style: TextStyle(
                             color: Color(0xff5385E5),
-                            fontSize: 15.sp,
+                            fontSize: 17.sp,
                             decoration: TextDecoration.underline),
                       )
                     ],
