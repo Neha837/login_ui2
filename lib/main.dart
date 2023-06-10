@@ -33,16 +33,14 @@ class _LoginPage extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff383B42),
-      body: Container(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Image.asset(
-                "assets/images/pic.PNG",
-                height: 46.h,
-                width: 100.w,
-              ),
-            ]),
+            Image.asset(
+              "assets/images/pic.PNG",
+              height: 46.h,
+              width: 100.w,
+            ),
             Container(
               height: 55.h,
               width: 100.w,
@@ -148,7 +146,7 @@ class _LoginPage extends State<LoginPage> {
                           Container(
                             height: 8.h,
                             width: 27.w,
-                            child: Image.asset("assets/images/Googleicon.png"),
+                            child: Image.asset("assets/images/GoogleIcon.png"),
                             decoration: BoxDecoration(
                               color: Color(0xff1F2126),
                               border: Border.all(color: Color(0xff383B42)),
