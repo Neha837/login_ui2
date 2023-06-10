@@ -41,7 +41,7 @@ class _LoginPage extends State<LoginPage> {
               top: 30,
             )),
             Image.asset(
-              "assets/images/pic.PNG",
+              "assets/images/cap.PNG",
               height: 46.h,
               width: 100.w,
             ),
