@@ -148,7 +148,7 @@ class _LoginPage extends State<LoginPage> {
                           Container(
                             height: 8.h,
                             width: 27.w,
-                            child: Image.asset("images/Googleicon.png"),
+                            child: Image.asset("assets/images/Googleicon.png"),
                             decoration: BoxDecoration(
                               color: Color(0xff1F2126),
                               border: Border.all(color: Color(0xff383B42)),
