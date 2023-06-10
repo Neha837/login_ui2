@@ -107,7 +107,7 @@ class _LoginPage extends State<LoginPage> {
                             height: 8.h,
                             width: 27.w,
                             child: Image.asset(
-                              "images/Vector.png",
+                              "assets/images/Vector.png",
                             ),
                             decoration: BoxDecoration(
                               color: Color(0xff1F2126),
