@@ -38,7 +38,7 @@ class _LoginPage extends State<LoginPage> {
           children: [
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Image.asset(
-                "images/pic.PNG",
+                "assets/images/pic.PNG",
                 height: 45.h,
                 width: 100.w,
               ),
