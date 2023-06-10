@@ -128,7 +128,7 @@ class _LoginPage extends State<LoginPage> {
                           Container(
                             height: 8.h,
                             width: 27.w,
-                            child: Image.asset("images/twitter.png"),
+                            child: Image.asset("assets/images/twitter.png"),
                             decoration: BoxDecoration(
                               color: Color(0xff1F2126),
                               border: Border.all(color: Color(0xff383B42)),
