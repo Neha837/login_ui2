@@ -92,8 +92,10 @@ class _LoginPage extends State<LoginPage> {
                     children: [
                       Text(
                         "Or Sign Up with",
-                        style:
-                            TextStyle(fontSize: 16.sp, color: Colors.white70),
+                        style: TextStyle(
+                          fontSize: 16.sp,
+                          color: Colors.white70,
+                        ),
                       )
                     ],
                   ),
