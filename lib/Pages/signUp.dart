@@ -79,7 +79,7 @@ class _PageState extends State<SignupPage> {
                     height: 77.8.h,
                     width: 100.w,
                     decoration: BoxDecoration(
-                        color: Color(0xff292B31),
+                        color: Color(0xff1F2126),
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(30),
                           topRight: Radius.circular(30),
@@ -106,7 +106,7 @@ class _PageState extends State<SignupPage> {
                             height: 7.h,
                             width: 90.w,
                             decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 50, 52, 58),
+                              color: Color.fromARGB(255, 44, 47, 54),
                               shape: BoxShape.rectangle,
                               border: Border.all(color: Color(0xff8F8F8F)),
                               borderRadius: BorderRadius.all(
@@ -142,7 +142,7 @@ class _PageState extends State<SignupPage> {
                             height: 7.h,
                             width: 90.w,
                             decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 50, 52, 58),
+                              color: Color.fromARGB(255, 44, 47, 54),
                               shape: BoxShape.rectangle,
                               border: Border.all(color: Color(0xff8F8F8F)),
                               borderRadius: BorderRadius.all(
@@ -176,7 +176,7 @@ class _PageState extends State<SignupPage> {
                             height: 7.h,
                             width: 90.w,
                             decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 50, 52, 58),
+                              color: Color.fromARGB(255, 44, 47, 54),
                               shape: BoxShape.rectangle,
                               border: Border.all(color: Color(0xff8F8F8F)),
                               borderRadius: BorderRadius.all(
@@ -212,7 +212,7 @@ class _PageState extends State<SignupPage> {
                             height: 7.h,
                             width: 90.w,
                             decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 50, 52, 58),
+                              color: Color.fromARGB(255, 44, 47, 54),
                               shape: BoxShape.rectangle,
                               border: Border.all(color: Color(0xff8F8F8F)),
                               borderRadius: BorderRadius.all(
