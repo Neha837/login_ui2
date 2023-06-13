@@ -103,7 +103,7 @@ class _PageState extends State<SignupPage> {
                             height: 1.h,
                           ),
                           Container(
-                            height: 8.h,
+                            height: 7.h,
                             width: 90.w,
                             decoration: BoxDecoration(
                               color: Color.fromARGB(255, 50, 52, 58),
@@ -114,7 +114,7 @@ class _PageState extends State<SignupPage> {
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.only(top: 3.h, left: 2.6.h),
+                              padding: EdgeInsets.only(top: 2.3.h, left: 2.6.h),
                               child: Text(
                                 "youremail@mail.com",
                                 style: TextStyle(
@@ -139,7 +139,7 @@ class _PageState extends State<SignupPage> {
                             height: 1.h,
                           ),
                           Container(
-                            height: 8.h,
+                            height: 7.h,
                             width: 90.w,
                             decoration: BoxDecoration(
                               color: Color.fromARGB(255, 50, 52, 58),
@@ -150,7 +150,7 @@ class _PageState extends State<SignupPage> {
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.only(top: 3.h, left: 2.6.h),
+                              padding: EdgeInsets.only(top: 2.3.h, left: 2.6.h),
                               child: Text(
                                 "Enter your username",
                                 style: TextStyle(
@@ -173,7 +173,7 @@ class _PageState extends State<SignupPage> {
                             height: 1.h,
                           ),
                           Container(
-                            height: 8.h,
+                            height: 7.h,
                             width: 90.w,
                             decoration: BoxDecoration(
                               color: Color.fromARGB(255, 50, 52, 58),
@@ -184,7 +184,7 @@ class _PageState extends State<SignupPage> {
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.only(top: 3.h, left: 2.6.h),
+                              padding: EdgeInsets.only(top: 2.3.h, left: 2.6.h),
                               child: Text(
                                 "Pick a strong password",
                                 style: TextStyle(
@@ -209,7 +209,7 @@ class _PageState extends State<SignupPage> {
                             height: 1.h,
                           ),
                           Container(
-                            height: 8.h,
+                            height: 7.h,
                             width: 90.w,
                             decoration: BoxDecoration(
                               color: Color.fromARGB(255, 50, 52, 58),
@@ -220,7 +220,7 @@ class _PageState extends State<SignupPage> {
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.only(top: 3.h, left: 2.6.h),
+                              padding: EdgeInsets.only(top: 2.3.h, left: 2.6.h),
                               child: Text(
                                 "Type again your password to confirm",
                                 style: TextStyle(
