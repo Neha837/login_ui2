@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:login_ui/Pages/signUp.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class BoardingPage extends StatefulWidget {
@@ -34,32 +36,32 @@ class _PageState extends State<BoardingPage> {
             child: Column(
               children: [
                 Padding(padding: EdgeInsets.all(25)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 7.h,
-                      width: 90.w,
-                      padding: EdgeInsets.all(5),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.rectangle,
-                        color: Color(0xff31D8E3),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(20),
-                        ),
-                      ),
-                      child: Text(
-                        "Sign Up with Email",
-                        style: TextStyle(
-                            color: Color(
-                              0xffffffff,
-                            ),
-                            fontWeight: FontWeight.w600,
-                            fontSize: 18.sp),
+                InkWell(
+                  onTap: () {
+                    Get.to(SignupPage());
+                  },
+                  child: Container(
+                    height: 7.h,
+                    width: 90.w,
+                    padding: EdgeInsets.all(5),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      color: Color(0xff31D8E3),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20),
                       ),
                     ),
-                  ],
+                    child: Text(
+                      "Sign Up with Email",
+                      style: TextStyle(
+                          color: Color(
+                            0xffffffff,
+                          ),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18.sp),
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: 4.h,
