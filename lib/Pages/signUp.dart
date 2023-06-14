@@ -243,21 +243,15 @@ class _PageState extends State<SignupPage> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      // Container(
-                                      //   height: 2.2.h,
-                                      //   width: 2.2.h,
-                                      //   decoration: BoxDecoration(
-                                      //       border: Border.all(
-                                      //           color: Color(0xff8F8F8F)),
-                                      //       borderRadius: BorderRadius.all(
-                                      //           Radius.circular(4))),
-                                      // ),
                                       Theme(
                                         data: Theme.of(context).copyWith(
                                             unselectedWidgetColor:
                                                 Color(0xff8F8F8F)),
                                         child: Checkbox(
                                           value: is_checked,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(6)),
                                           onChanged: (val) {
                                             setState(() {
                                               is_checked = val!;
