@@ -100,6 +100,8 @@ class _PageState extends State<SignupPage> {
                                     height: 7.h,
                                     width: 90.w,
                                     child: TextField(
+                                      style:
+                                          TextStyle(color: Color(0xffFFFFFF)),
                                       decoration: InputDecoration(
                                           hintText: "youremail@mail.com",
                                           hintStyle: TextStyle(
@@ -139,6 +141,8 @@ class _PageState extends State<SignupPage> {
                                     height: 7.h,
                                     width: 90.w,
                                     child: TextField(
+                                      style:
+                                          TextStyle(color: Color(0xffFFFFFF)),
                                       decoration: InputDecoration(
                                           hintText: "Enter your username",
                                           hintStyle: TextStyle(
@@ -178,6 +182,8 @@ class _PageState extends State<SignupPage> {
                                     height: 7.h,
                                     width: 90.w,
                                     child: TextField(
+                                      style:
+                                          TextStyle(color: Color(0xffFFFFFF)),
                                       decoration: InputDecoration(
                                           hintText: "Pick a strong password",
                                           hintStyle: TextStyle(
@@ -195,6 +201,7 @@ class _PageState extends State<SignupPage> {
                                                   BorderRadius.circular(20),
                                               borderSide: BorderSide(
                                                   color: Color(0xff8F8F8F)))),
+                                      obscureText: true,
                                     ),
                                   ),
                                   SizedBox(
@@ -217,6 +224,8 @@ class _PageState extends State<SignupPage> {
                                     height: 7.h,
                                     width: 90.w,
                                     child: TextField(
+                                      style:
+                                          TextStyle(color: Color(0xffFFFFFF)),
                                       decoration: InputDecoration(
                                           hintText:
                                               "Type again your password to confirm",
@@ -235,6 +244,7 @@ class _PageState extends State<SignupPage> {
                                                   BorderRadius.circular(20),
                                               borderSide: BorderSide(
                                                   color: Color(0xff8F8F8F)))),
+                                      obscureText: true,
                                     ),
                                   ),
                                   SizedBox(
