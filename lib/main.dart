@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-// import 'package:login_ui/Pages/boading.dart';
-import 'package:login_ui/Pages/signUp.dart';
+import 'package:login_ui/Pages/Task01/signUp.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 void main() {
@@ -17,7 +16,6 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, screenType) {
         return GetMaterialApp(
           home: SignupPage(),
-          // home: BoardingPage(),
           debugShowCheckedModeBanner: false,
         );
       },

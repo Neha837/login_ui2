@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:login_ui/Pages/signUp.dart';
+import 'package:login_ui/Pages/Task01/signUp.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class BoardingPage extends StatefulWidget {
-  BoardingPage({super.key});
+class Task01 extends StatefulWidget {
+  Task01({super.key});
 
   @override
-  State<BoardingPage> createState() => _PageState();
+  State<Task01> createState() => _PageState();
 }
 
-class _PageState extends State<BoardingPage> {
+class _PageState extends State<Task01> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
