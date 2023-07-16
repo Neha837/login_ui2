@@ -108,23 +108,35 @@ class _PageState extends State<SignupPage> {
                                                           fontWeight:
                                                               FontWeight.w500,
                                                           fontSize: 17.sp),
-                                                      contentPadding: EdgeInsets.only(
-                                                          top: 2.h,
-                                                          left: 2.5.h,
-                                                          bottom: 2.h),
-                                                      focusedBorder: OutlineInputBorder(
-                                                          borderRadius: BorderRadius.circular(
-                                                              18),
-                                                          borderSide: BorderSide(
-                                                              width: 1.5,
-                                                              color: Color(
-                                                                  0xff31D8E3))),
-                                                      enabledBorder: OutlineInputBorder(
-                                                          borderRadius: BorderRadius.circular(
-                                                              18),
-                                                          borderSide: BorderSide(
-                                                              width: 1.5,
-                                                              color: isEmail ? Color(0xff8F8F8F) : Colors.red)))),
+                                                      contentPadding:
+                                                          EdgeInsets.only(
+                                                              top: 2.h,
+                                                              left: 2.5.h,
+                                                              bottom: 2.h),
+                                                      focusedBorder:
+                                                          OutlineInputBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          18),
+                                                              borderSide:
+                                                                  BorderSide(
+                                                                width: 1.5,
+                                                                color: Color(
+                                                                    0xff31D8E3),
+                                                              )),
+                                                      enabledBorder:
+                                                          OutlineInputBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(18),
+                                                        borderSide: BorderSide(
+                                                            width: 1.5,
+                                                            color: isEmail
+                                                                ? Color(
+                                                                    0xff8F8F8F)
+                                                                : Colors.red),
+                                                      ))),
                                               SizedBox(height: 1.h),
                                               if (!isEmail)
                                                 Row(children: [
@@ -164,6 +176,7 @@ class _PageState extends State<SignupPage> {
                                                 height: 7.h,
                                                 width: 90.w,
                                                 child: TextField(
+                                                  controller: _email,
                                                   style: TextStyle(
                                                       color: Color(0xffFFFFFF)),
                                                   decoration: InputDecoration(
@@ -178,9 +191,10 @@ class _PageState extends State<SignupPage> {
                                                               left: 2.5.h),
                                                       focusedBorder: OutlineInputBorder(
                                                           borderRadius:
-                                                              BorderRadius
-                                                                  .circular(20),
+                                                              BorderRadius.circular(
+                                                                  20),
                                                           borderSide: BorderSide(
+                                                              width: 1.5,
                                                               color: Color(
                                                                   0xff31D8E3))),
                                                       enabledBorder: OutlineInputBorder(
@@ -188,12 +202,34 @@ class _PageState extends State<SignupPage> {
                                                               BorderRadius
                                                                   .circular(20),
                                                           borderSide: BorderSide(
-                                                              color: Color(0xff8F8F8F)))),
+                                                              width: 1.5,
+                                                              color: isEmail
+                                                                  ? Color(0xff8F8F8F)
+                                                                  : Colors.red))),
                                                 ),
                                               ),
                                               SizedBox(
-                                                height: 2.5.h,
+                                                height: 1.h,
                                               ),
+                                              if (!isEmail)
+                                                Row(children: [
+                                                  SizedBox(width: 1.h),
+                                                  Icon(
+                                                    Icons.warning_rounded,
+                                                    color: Colors.red,
+                                                    size: 18,
+                                                  ),
+                                                  SizedBox(width: 1.h),
+                                                  Text(
+                                                    "Another user with this username already exist,please try something else",
+                                                    style: TextStyle(
+                                                        color: Colors.red,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        fontSize: 14.sp),
+                                                  ),
+                                                ]),
+                                              SizedBox(height: 2.h),
                                               Padding(
                                                 padding:
                                                     EdgeInsets.only(left: 10),
@@ -213,6 +249,7 @@ class _PageState extends State<SignupPage> {
                                                 height: 7.h,
                                                 width: 90.w,
                                                 child: TextField(
+                                                  controller: _email,
                                                   style: TextStyle(
                                                       color: Color(0xffFFFFFF)),
                                                   decoration: InputDecoration(
@@ -227,9 +264,10 @@ class _PageState extends State<SignupPage> {
                                                               left: 2.5.h),
                                                       focusedBorder: OutlineInputBorder(
                                                           borderRadius:
-                                                              BorderRadius
-                                                                  .circular(20),
+                                                              BorderRadius.circular(
+                                                                  20),
                                                           borderSide: BorderSide(
+                                                              width: 1.5,
                                                               color: Color(
                                                                   0xff31D8E3))),
                                                       enabledBorder: OutlineInputBorder(
@@ -237,13 +275,35 @@ class _PageState extends State<SignupPage> {
                                                               BorderRadius
                                                                   .circular(20),
                                                           borderSide: BorderSide(
-                                                              color: Color(0xff8F8F8F)))),
+                                                              width: 1.5,
+                                                              color: isEmail
+                                                                  ? Color(0xff8F8F8F)
+                                                                  : Colors.red))),
                                                   obscureText: true,
                                                 ),
                                               ),
                                               SizedBox(
-                                                height: 2.5.h,
+                                                height: 1.h,
                                               ),
+                                              if (!isEmail)
+                                                Row(children: [
+                                                  SizedBox(width: 1.h),
+                                                  Icon(
+                                                    Icons.warning_rounded,
+                                                    color: Colors.red,
+                                                    size: 18,
+                                                  ),
+                                                  SizedBox(width: 1.h),
+                                                  Text(
+                                                    "Password must be eight or more characters",
+                                                    style: TextStyle(
+                                                        color: Colors.red,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        fontSize: 14.sp),
+                                                  ),
+                                                ]),
+                                              SizedBox(height: 2.h),
                                               Padding(
                                                 padding:
                                                     EdgeInsets.only(left: 10),
@@ -280,6 +340,7 @@ class _PageState extends State<SignupPage> {
                                                               BorderRadius
                                                                   .circular(20),
                                                           borderSide: BorderSide(
+                                                              width: 1.5,
                                                               color: Color(
                                                                   0xff31D8E3))),
                                                       enabledBorder: OutlineInputBorder(
@@ -287,7 +348,9 @@ class _PageState extends State<SignupPage> {
                                                               BorderRadius
                                                                   .circular(20),
                                                           borderSide: BorderSide(
-                                                              color: Color(0xff8F8F8F)))),
+                                                              width: 1.5,
+                                                              color:
+                                                                  Color(0xff8F8F8F)))),
                                                   obscureText: true,
                                                 ),
                                               ),
@@ -387,7 +450,7 @@ class _PageState extends State<SignupPage> {
                                                                       .w600,
                                                               fontSize:
                                                                   18.sp)))),
-                                                                  SizedBox(height: 2.h)
+                                              SizedBox(height: 2.h)
                                             ])))))
                       ]))))
         ])));
