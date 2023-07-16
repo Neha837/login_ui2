@@ -11,7 +11,75 @@ class SignupPage extends StatefulWidget {
 class _PageState extends State<SignupPage> {
   bool is_checked = false;
   TextEditingController _email = new TextEditingController();
-  bool isEmail = false;
+  TextEditingController _username = new TextEditingController();
+  TextEditingController _password = new TextEditingController();
+  TextEditingController _passwordAgain = new TextEditingController();
+  // Error handling
+  bool isEmailError = false;
+  bool isUserNameError = false;
+  bool isPasswordError = false;
+  bool isAgainPasswordError = false;
+
+  Widget field(String title, String hint, TextEditingController controller,
+      bool errorCheck, String errorMessage) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+            padding: EdgeInsets.only(left: 10),
+            child: Text(title,
+                style: TextStyle(
+                    color: Color(0xffFFFFFF),
+                    fontWeight: FontWeight.w500,
+                    fontSize: 18.sp))),
+        SizedBox(height: 1.h),
+        TextField(
+            controller: controller,
+            onChanged: (_) {
+              setState(() {
+                errorCheck = false;
+              });
+            },
+            style: TextStyle(color: Color(0xffFFFFFF)),
+            decoration: InputDecoration(
+                hintText: hint,
+                hintStyle: TextStyle(
+                    color: Color(0xff8F8F8F),
+                    fontWeight: FontWeight.w500,
+                    fontSize: 17.sp),
+                contentPadding:
+                    EdgeInsets.only(top: 2.h, left: 2.5.h, bottom: 2.h),
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(18),
+                    borderSide:
+                        BorderSide(width: 1.5, color: Color(0xff31D8E3))),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(18),
+                  borderSide: BorderSide(
+                      width: 1.5,
+                      color: !errorCheck ? Color(0xff8F8F8F) : Colors.red),
+                ))),
+        SizedBox(height: .5.h),
+        if (errorCheck)
+          Row(children: [
+            SizedBox(width: 1.h),
+            Icon(
+              Icons.warning_rounded,
+              color: Colors.red,
+              size: 18,
+            ),
+            SizedBox(width: 1.h),
+            Text(
+              errorMessage,
+              style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14.sp),
+            ),
+          ])
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -82,346 +150,74 @@ class _PageState extends State<SignupPage> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              Padding(
-                                                padding:
-                                                    EdgeInsets.only(left: 10),
-                                                child: Text(
-                                                  "Email",
-                                                  style: TextStyle(
-                                                      color: Color(0xffFFFFFF),
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      fontSize: 18.sp),
-                                                ),
-                                              ),
-                                              SizedBox(height: 1.h),
-                                              TextField(
-                                                  controller: _email,
-                                                  style: TextStyle(
-                                                      color: Color(0xffFFFFFF)),
-                                                  decoration: InputDecoration(
-                                                      hintText:
-                                                          "youremail@mail.com",
-                                                      hintStyle: TextStyle(
-                                                          color:
-                                                              Color(0xff8F8F8F),
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                          fontSize: 17.sp),
-                                                      contentPadding:
-                                                          EdgeInsets.only(
-                                                              top: 2.h,
-                                                              left: 2.5.h,
-                                                              bottom: 2.h),
-                                                      focusedBorder:
-                                                          OutlineInputBorder(
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          18),
-                                                              borderSide:
-                                                                  BorderSide(
-                                                                width: 1.5,
-                                                                color: Color(
-                                                                    0xff31D8E3),
-                                                              )),
-                                                      enabledBorder:
-                                                          OutlineInputBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(18),
-                                                        borderSide: BorderSide(
-                                                            width: 1.5,
-                                                            color: isEmail
-                                                                ? Color(
-                                                                    0xff8F8F8F)
-                                                                : Colors.red),
-                                                      ))),
-                                              SizedBox(height: 1.h),
-                                              if (!isEmail)
-                                                Row(children: [
-                                                  SizedBox(width: 1.h),
-                                                  Icon(
-                                                    Icons.warning_rounded,
-                                                    color: Colors.red,
-                                                    size: 18,
-                                                  ),
-                                                  SizedBox(width: 1.h),
-                                                  Text(
-                                                    "Please enter the correct email address",
-                                                    style: TextStyle(
-                                                        color: Colors.red,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        fontSize: 14.sp),
-                                                  ),
-                                                ]),
                                               SizedBox(height: 2.h),
-                                              Padding(
-                                                padding:
-                                                    EdgeInsets.only(left: 10),
-                                                child: Text(
-                                                  "Username",
-                                                  style: TextStyle(
-                                                      color: Color(0xffFFFFFF),
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      fontSize: 18.sp),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                height: 1.h,
-                                              ),
-                                              Container(
-                                                height: 7.h,
-                                                width: 90.w,
-                                                child: TextField(
-                                                  controller: _email,
-                                                  style: TextStyle(
-                                                      color: Color(0xffFFFFFF)),
-                                                  decoration: InputDecoration(
-                                                      hintText:
-                                                          "Enter your username",
-                                                      hintStyle: TextStyle(
-                                                          color: Colors.white60,
-                                                          fontSize: 17.sp),
-                                                      contentPadding:
-                                                          EdgeInsets.only(
-                                                              top: 1.h,
-                                                              left: 2.5.h),
-                                                      focusedBorder: OutlineInputBorder(
-                                                          borderRadius:
-                                                              BorderRadius.circular(
-                                                                  20),
-                                                          borderSide: BorderSide(
-                                                              width: 1.5,
-                                                              color: Color(
-                                                                  0xff31D8E3))),
-                                                      enabledBorder: OutlineInputBorder(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(20),
-                                                          borderSide: BorderSide(
-                                                              width: 1.5,
-                                                              color: isEmail
-                                                                  ? Color(0xff8F8F8F)
-                                                                  : Colors.red))),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                height: 1.h,
-                                              ),
-                                              if (!isEmail)
-                                                Row(children: [
-                                                  SizedBox(width: 1.h),
-                                                  Icon(
-                                                    Icons.warning_rounded,
-                                                    color: Colors.red,
-                                                    size: 18,
-                                                  ),
-                                                  SizedBox(width: 1.h),
-                                                  Text(
-                                                    "Another user with this username already exist,please try something else",
-                                                    style: TextStyle(
-                                                        color: Colors.red,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        fontSize: 14.sp),
-                                                  ),
-                                                ]),
-                                              SizedBox(height: 2.h),
-                                              Padding(
-                                                padding:
-                                                    EdgeInsets.only(left: 10),
-                                                child: Text(
-                                                  "Password",
-                                                  style: TextStyle(
-                                                      color: Color(0xffFFFFFF),
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      fontSize: 18.sp),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                height: 1.h,
-                                              ),
-                                              Container(
-                                                height: 7.h,
-                                                width: 90.w,
-                                                child: TextField(
-                                                  controller: _email,
-                                                  style: TextStyle(
-                                                      color: Color(0xffFFFFFF)),
-                                                  decoration: InputDecoration(
-                                                      hintText:
-                                                          "Pick a strong password",
-                                                      hintStyle: TextStyle(
-                                                          color: Colors.white60,
-                                                          fontSize: 17.sp),
-                                                      contentPadding:
-                                                          EdgeInsets.only(
-                                                              top: 1.h,
-                                                              left: 2.5.h),
-                                                      focusedBorder: OutlineInputBorder(
-                                                          borderRadius:
-                                                              BorderRadius.circular(
-                                                                  20),
-                                                          borderSide: BorderSide(
-                                                              width: 1.5,
-                                                              color: Color(
-                                                                  0xff31D8E3))),
-                                                      enabledBorder: OutlineInputBorder(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(20),
-                                                          borderSide: BorderSide(
-                                                              width: 1.5,
-                                                              color: isEmail
-                                                                  ? Color(0xff8F8F8F)
-                                                                  : Colors.red))),
-                                                  obscureText: true,
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                height: 1.h,
-                                              ),
-                                              if (!isEmail)
-                                                Row(children: [
-                                                  SizedBox(width: 1.h),
-                                                  Icon(
-                                                    Icons.warning_rounded,
-                                                    color: Colors.red,
-                                                    size: 18,
-                                                  ),
-                                                  SizedBox(width: 1.h),
-                                                  Text(
-                                                    "Password must be eight or more characters",
-                                                    style: TextStyle(
-                                                        color: Colors.red,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        fontSize: 14.sp),
-                                                  ),
-                                                ]),
-                                              SizedBox(height: 2.h),
-                                              Padding(
-                                                padding:
-                                                    EdgeInsets.only(left: 10),
-                                                child: Text(
-                                                  "Confirm Password",
-                                                  style: TextStyle(
-                                                      color: Color(0xffFFFFFF),
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      fontSize: 18.sp),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                height: 1.h,
-                                              ),
-                                              Container(
-                                                height: 7.h,
-                                                width: 90.w,
-                                                child: TextField(
-                                                  style: TextStyle(
-                                                      color: Color(0xffFFFFFF)),
-                                                  decoration: InputDecoration(
-                                                      hintText:
-                                                          "Type again your password to confirm",
-                                                      hintStyle: TextStyle(
-                                                          color: Colors.white60,
-                                                          fontSize: 17.sp),
-                                                      contentPadding:
-                                                          EdgeInsets.only(
-                                                              top: 1.h,
-                                                              left: 2.5.h),
-                                                      focusedBorder: OutlineInputBorder(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(20),
-                                                          borderSide: BorderSide(
-                                                              width: 1.5,
-                                                              color: Color(
-                                                                  0xff31D8E3))),
-                                                      enabledBorder: OutlineInputBorder(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(20),
-                                                          borderSide: BorderSide(
-                                                              width: 1.5,
-                                                              color:
-                                                                  Color(0xff8F8F8F)))),
-                                                  obscureText: true,
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                height: 4.h,
-                                              ),
-                                              Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Theme(
-                                                    data: Theme.of(context)
-                                                        .copyWith(
-                                                            unselectedWidgetColor:
-                                                                Color(
-                                                                    0xff8F8F8F)),
-                                                    child: Checkbox(
-                                                      value: is_checked,
-                                                      shape:
-                                                          RoundedRectangleBorder(
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          6)),
-                                                      onChanged: (val) {
-                                                        setState(() {
-                                                          is_checked = val!;
-                                                        });
-                                                      },
-                                                      activeColor:
-                                                          Color(0xff8F8F8),
-                                                      checkColor:
-                                                          Color(0xff31D8E3),
-                                                    ),
-                                                  ),
-                                                  Text(
-                                                    "I agree to",
-                                                    style: TextStyle(
-                                                      color: Color(0xffFFFFFF),
-                                                      fontSize: 15.sp,
-                                                    ),
-                                                  ),
-                                                  SizedBox(
-                                                    width: 1.5.w,
-                                                  ),
-                                                  Text(
-                                                    "Term of services",
-                                                    style: TextStyle(
-                                                        color:
-                                                            Color(0xff5385E5),
-                                                        fontSize: 15.sp,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        decoration:
-                                                            TextDecoration
-                                                                .underline),
-                                                  ),
-                                                ],
-                                              ),
-                                              SizedBox(
-                                                height: 2.h,
-                                              ),
+                                              field(
+                                                  'Email',
+                                                  "Enter your email address",
+                                                  _email,
+                                                  isEmailError,
+                                                  'Enter valid email address'),
+                                              SizedBox(height: 1.5.h),
+                                              field(
+                                                  'UserName',
+                                                  "Enter User Name",
+                                                  _username,
+                                                  isUserNameError,
+                                                  'UserName is Missing'),
+                                              SizedBox(height: 1.5.h),
+                                              field(
+                                                  'Password',
+                                                  "Enter your Password",
+                                                  _password,
+                                                  isPasswordError,
+                                                  'Enter valid Password'),
+                                              SizedBox(height: 1.5.h),
+                                              field(
+                                                  'Reenter Password',
+                                                  "Enter your password again",
+                                                  _passwordAgain,
+                                                  isAgainPasswordError,
+                                                  'Your password not matched'),
+                                              SizedBox(height: 3.h),
                                               InkWell(
                                                   onTap: () {
                                                     FocusManager
                                                         .instance.primaryFocus!
                                                         .unfocus();
                                                     if (_email.text.isEmail) {
-                                                      isEmail = true;
+                                                      isEmailError = false;
                                                     } else {
-                                                      isEmail = false;
+                                                      isEmailError = true;
+                                                      setState(() {});
+                                                      return;
+                                                    }
+
+                                                    if (_username.text == "") {
+                                                      isUserNameError = true;
+                                                      setState(() {});
+                                                      return;
+                                                    } else {
+                                                      isUserNameError = false;
+                                                    }
+
+                                                    if (_password.text.length <
+                                                        8) {
+                                                      isPasswordError = true;
+                                                      setState(() {});
+                                                      return;
+                                                    } else {
+                                                      isPasswordError = false;
+                                                    }
+
+                                                    if (_password.text ==
+                                                        _passwordAgain.text) {
+                                                      isAgainPasswordError =
+                                                          false;
+                                                    } else {
+                                                      isAgainPasswordError =
+                                                          true;
+                                                      setState(() {});
+                                                      return;
                                                     }
                                                     setState(() {});
                                                   },
