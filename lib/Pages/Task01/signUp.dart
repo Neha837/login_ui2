@@ -88,34 +88,33 @@ class _PageState extends State<SignupPage> {
         body: SafeArea(
             child: Column(children: [
           Container(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              child:
-                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                InkWell(
-                    onTap: () {
-                      Get.back();
-                    },
-                    child: Container(
-                        decoration: BoxDecoration(
-                            color: Color(0xff292B31),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                        height: 4.h,
-                        width: 4.h,
-                        child: Icon(Icons.chevron_left,
-                            size: 20, color: Colors.white))),
-                Spacer(),
-                Container(
-                    child: Image.asset("assets/icons/vector.png", height: 6.h)),
-                Spacer(),
-                Container(
-                    decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
-                    width: 4.h,
-                    height: 4.h,
-                    child: Icon(Icons.chevron_left, color: Colors.transparent))
-              ])),
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              InkWell(
+                  onTap: () {
+                    Get.back();
+                  },
+                  child: Container(
+                      decoration: BoxDecoration(
+                          color: Color(0xff292B31),
+                          borderRadius: BorderRadius.all(Radius.circular(10))),
+                      height: 4.h,
+                      width: 4.h,
+                      child: Icon(Icons.chevron_left,
+                          size: 20, color: Colors.white))),
+              Spacer(),
+              Container(
+                  child: Image.asset("assets/icons/vector.png", height: 6.h)),
+              Spacer(),
+              Container(
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                  width: 4.h,
+                  height: 4.h,
+                  child: Icon(Icons.chevron_left, color: Colors.transparent))
+            ]),
+          ),
           SizedBox(height: 15),
           Expanded(
               child: Container(
@@ -135,119 +134,111 @@ class _PageState extends State<SignupPage> {
                         SizedBox(height: 2.2.h),
                         Expanded(
                             child: SingleChildScrollView(
-                                child: Container(
-                                    width: 100.w,
-                                    padding: EdgeInsets.only(top: 20),
-                                    decoration: BoxDecoration(
-                                        color: Color(0xff1F2126),
-                                        borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(30),
-                                          topRight: Radius.circular(30),
-                                        )),
-                                    child: Padding(
-                                        padding: EdgeInsets.all(20),
-                                        child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              SizedBox(height: 2.h),
-                                              field(
-                                                  'Email',
-                                                  "Enter your email address",
-                                                  _email,
-                                                  isEmailError,
-                                                  'Enter valid email address'),
-                                              SizedBox(height: 1.5.h),
-                                              field(
-                                                  'UserName',
-                                                  "Enter User Name",
-                                                  _username,
-                                                  isUserNameError,
-                                                  'UserName is Missing'),
-                                              SizedBox(height: 1.5.h),
-                                              field(
-                                                  'Password',
-                                                  "Enter your Password",
-                                                  _password,
-                                                  isPasswordError,
-                                                  'Enter valid Password'),
-                                              SizedBox(height: 1.5.h),
-                                              field(
-                                                  'Reenter Password',
-                                                  "Enter your password again",
-                                                  _passwordAgain,
-                                                  isAgainPasswordError,
-                                                  'Your password not matched'),
-                                              SizedBox(height: 3.h),
-                                              InkWell(
-                                                  onTap: () {
-                                                    FocusManager
-                                                        .instance.primaryFocus!
-                                                        .unfocus();
-                                                    if (_email.text.isEmail) {
-                                                      isEmailError = false;
-                                                    } else {
-                                                      isEmailError = true;
-                                                      setState(() {});
-                                                      return;
-                                                    }
+                          child: Container(
+                              width: 100.w,
+                              padding: EdgeInsets.only(top: 20),
+                              decoration: BoxDecoration(
+                                  color: Color(0xff1F2126),
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(30),
+                                    topRight: Radius.circular(30),
+                                  )),
+                              child: Padding(
+                                  padding: EdgeInsets.all(20),
+                                  child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        SizedBox(height: 2.h),
+                                        field(
+                                            'Email',
+                                            "Enter your email address",
+                                            _email,
+                                            isEmailError,
+                                            'Enter valid email address'),
+                                        SizedBox(height: 1.5.h),
+                                        field(
+                                            'UserName',
+                                            "Enter User Name",
+                                            _username,
+                                            isUserNameError,
+                                            'UserName is Missing'),
+                                        SizedBox(height: 1.5.h),
+                                        field(
+                                            'Password',
+                                            "Enter your Password",
+                                            _password,
+                                            isPasswordError,
+                                            'Enter valid Password'),
+                                        SizedBox(height: 1.5.h),
+                                        field(
+                                            'Reenter Password',
+                                            "Enter your password again",
+                                            _passwordAgain,
+                                            isAgainPasswordError,
+                                            'Your password not matched'),
+                                        SizedBox(height: 3.h),
+                                        InkWell(
+                                            onTap: () {
+                                              FocusManager
+                                                  .instance.primaryFocus!
+                                                  .unfocus();
+                                              if (_email.text.isEmail) {
+                                                isEmailError = false;
+                                              } else {
+                                                isEmailError = true;
+                                                setState(() {});
+                                                return;
+                                              }
 
-                                                    if (_username.text == "") {
-                                                      isUserNameError = true;
-                                                      setState(() {});
-                                                      return;
-                                                    } else {
-                                                      isUserNameError = false;
-                                                    }
+                                              if (_username.text == "") {
+                                                isUserNameError = true;
+                                                setState(() {});
+                                                return;
+                                              } else {
+                                                isUserNameError = false;
+                                              }
 
-                                                    if (_password.text.length <
-                                                        8) {
-                                                      isPasswordError = true;
-                                                      setState(() {});
-                                                      return;
-                                                    } else {
-                                                      isPasswordError = false;
-                                                    }
+                                              if (_password.text.length < 8) {
+                                                isPasswordError = true;
+                                                setState(() {});
+                                                return;
+                                              } else {
+                                                isPasswordError = false;
+                                              }
 
-                                                    if (_password.text ==
-                                                        _passwordAgain.text) {
-                                                      isAgainPasswordError =
-                                                          false;
-                                                    } else {
-                                                      isAgainPasswordError =
-                                                          true;
-                                                      setState(() {});
-                                                      return;
-                                                    }
-                                                    setState(() {});
-                                                  },
-                                                  child: Container(
-                                                      height: 7.h,
-                                                      width: 90.w,
-                                                      padding:
-                                                          EdgeInsets.all(5),
-                                                      alignment:
-                                                          Alignment.center,
-                                                      decoration: BoxDecoration(
-                                                          shape: BoxShape
-                                                              .rectangle,
-                                                          color:
-                                                              Color(0xff31D8E3),
-                                                          borderRadius:
-                                                              BorderRadius.all(
-                                                                  Radius.circular(
-                                                                      20))),
-                                                      child: Text("Sign Up",
-                                                          style: TextStyle(
-                                                              color: Color(
-                                                                  0xffffffff),
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              fontSize:
-                                                                  18.sp)))),
-                                              SizedBox(height: 2.h)
-                                            ])))))
+                                              if (_password.text ==
+                                                  _passwordAgain.text) {
+                                                isAgainPasswordError = false;
+                                              } else {
+                                                isAgainPasswordError = true;
+                                                setState(() {});
+                                                return;
+                                              }
+                                              setState(() {});
+                                            },
+                                            child: Container(
+                                                height: 7.h,
+                                                width: 90.w,
+                                                padding: EdgeInsets.all(5),
+                                                alignment: Alignment.center,
+                                                decoration: BoxDecoration(
+                                                    shape: BoxShape.rectangle,
+                                                    color: Color(0xff31D8E3),
+                                                    borderRadius:
+                                                        BorderRadius.all(
+                                                            Radius.circular(
+                                                                20))),
+                                                child: Text("Sign Up",
+                                                    style: TextStyle(
+                                                        color:
+                                                            Color(0xffffffff),
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        fontSize: 18.sp)))),
+                                        SizedBox(height: 2.h)
+                                      ]))),
+                        ))
                       ]))))
         ])));
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class signup2Page extends StatefulWidget {
   signup2Page({super.key});
@@ -38,10 +39,14 @@ class _PageState extends State<signup2Page> {
             });
           },
           decoration: InputDecoration(
+            prefixIcon: Icon(icon),
             filled: true,
             fillColor: Colors.white,
             hintText: hint,
-            hintStyle: TextStyle(color: Color(0xff8E8E8E), fontSize: 17.sp),
+            hintStyle: GoogleFonts.montserrat(
+                color: Color(0xff8E8E8E),
+                fontSize: 16.5.sp,
+                fontWeight: FontWeight.w400),
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: Color(0xff002065))),
@@ -59,12 +64,12 @@ class _PageState extends State<signup2Page> {
             Icon(
               Icons.warning_rounded,
               color: Colors.red,
-              size: 18,
+              size: 16,
             ),
             SizedBox(width: 1.h),
             Text(
               errorMessage,
-              style: TextStyle(
+              style: GoogleFonts.montserrat(
                   color: Colors.red,
                   fontWeight: FontWeight.w500,
                   fontSize: 14.sp),
@@ -92,10 +97,11 @@ class _PageState extends State<signup2Page> {
               children: [
                 Text(
                   "NIGHTLY",
-                  style: TextStyle(
-                      color: Color(0xff1E3A77),
-                      fontSize: 25.sp,
-                      fontWeight: FontWeight.w600),
+                  style: GoogleFonts.montserrat(
+                    color: Color(0xff1E3A77),
+                    fontSize: 23.sp,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -103,25 +109,29 @@ class _PageState extends State<signup2Page> {
                     Padding(
                       padding: EdgeInsets.only(top: 3),
                       child: Container(
-                        height: 12.sp,
+                        height: 10.sp,
                         width: 35.sp,
                         decoration: BoxDecoration(color: Color(0xffE4B922)),
                       ),
                     ),
-                    SizedBox(width: 10.sp),
+                    SizedBox(width: 8.sp),
                     Text(
                       "WHAT'S",
-                      style: TextStyle(
-                          color: Color(0xffE4B922),
-                          fontSize: 15.sp,
-                          fontWeight: FontWeight.w400),
+                      style: GoogleFonts.montserrat(
+                        color: Color(0xffE4B922),
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                     SizedBox(width: 1.w),
-                    Text("UP?",
-                        style: TextStyle(
-                            color: Color(0xffE4B922),
-                            fontSize: 15.sp,
-                            fontWeight: FontWeight.w400))
+                    Text(
+                      "UP?",
+                      style: GoogleFonts.montserrat(
+                        color: Color(0xffE4B922),
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    )
                   ],
                 ),
                 SizedBox(height: 10.h),
@@ -133,32 +143,28 @@ class _PageState extends State<signup2Page> {
                     )),
                     Text(
                       "Register",
-                      style: TextStyle(
+                      style: GoogleFonts.montserrat(
                         fontSize: 21.sp,
-                        fontWeight: FontWeight.w800,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 1.h),
+                SizedBox(height: .5.h),
                 Text(
-                  "Welcome! Register as a establishment to",
-                  style:
-                      TextStyle(fontSize: 17.sp, fontWeight: FontWeight.w400),
+                  "Welcome! Register as a establishment to\npost 180 character news 'bites' of of events\nand special offers.",
+                  style: GoogleFonts.montserrat(
+                      fontSize: 16.8.sp, fontWeight: FontWeight.w500),
+                  textAlign: TextAlign.center,
                 ),
-                Text(
-                  "post 180 character news 'bites' of of events",
-                  style:
-                      TextStyle(fontSize: 17.sp, fontWeight: FontWeight.w400),
+                SizedBox(height: 2.h),
+                field(
+                  "Enter username",
+                  _username,
+                  isUserNameError,
+                  "UserName is Missing",
+                  Icons.supervisor_account_outlined,
                 ),
-                Text(
-                  "and special offers.",
-                  style:
-                      TextStyle(fontSize: 17.sp, fontWeight: FontWeight.w400),
-                ),
-                SizedBox(height: 1.h),
-                field("Enter username", _username, isUserNameError,
-                    "UserName is Missing", Icons.supervisor_account_outlined),
                 SizedBox(height: 1.5.h),
                 field(
                     "Enter email",
@@ -193,16 +199,17 @@ class _PageState extends State<signup2Page> {
                         }),
                     Text(
                       "I agree to abide by the",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500, fontSize: 15.sp),
+                      style: GoogleFonts.montserrat(
+                          fontWeight: FontWeight.w600, fontSize: 15.sp),
                     ),
                     SizedBox(width: .5.w),
                     Text(
                       "Terms of Service.",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w800,
-                          fontSize: 15.sp,
-                          decoration: TextDecoration.underline),
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 15.sp,
+                        decoration: TextDecoration.underline,
+                      ),
                     )
                   ],
                 ),
@@ -254,15 +261,11 @@ class _PageState extends State<signup2Page> {
                         Radius.circular(10),
                       ),
                     ),
-                    child: Text(
-                      " Sign Up",
-                      style: TextStyle(
-                          color: Color(
-                            0xffFFFFFF,
-                          ),
-                          fontWeight: FontWeight.w600,
-                          fontSize: 18.sp),
-                    ),
+                    child: Text(" Sign Up",
+                        style: GoogleFonts.montserrat(
+                            color: Color(0xffFFFFFF),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 17.sp)),
                   ),
                 ),
               ],

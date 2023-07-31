@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_ui/Pages/Task02/signup2.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class loginPage extends StatefulWidget {
   const loginPage({super.key});
@@ -25,7 +26,7 @@ class _PageState extends State<loginPage> {
     IconData icon,
   ) {
     return Padding(
-      padding: EdgeInsets.only(left: 40, right: 40),
+      padding: EdgeInsets.only(left: 6.h, right: 6.h),
       child: Column(
         children: [
           TextField(
@@ -36,23 +37,23 @@ class _PageState extends State<loginPage> {
               });
             },
             decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                hintText: hint,
-                hintStyle: TextStyle(
+              prefixIcon: Icon(icon),
+              filled: true,
+              fillColor: Colors.white,
+              hintText: hint,
+              hintStyle: GoogleFonts.montserrat(
                   color: Color(0xff8E8E8E),
-                  fontSize: 17.sp,
-                ),
-                focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Color(0xff002065))),
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(
-                        color: !errorCheck ? Color(0xffBFBFBF) : Colors.red)),
-                // contentPadding:
-                //     EdgeInsets.only(top: 2.h, left: 2.5.h, bottom: 2.h),
-                contentPadding: EdgeInsets.only(left: 2.h)),
+                  fontSize: 16.5.sp,
+                  fontWeight: FontWeight.w400),
+              focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Color(0xff002065))),
+              enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(
+                      color: !errorCheck ? Color(0xffBFBFBF) : Colors.red)),
+              contentPadding: EdgeInsets.zero,
+            ),
           ),
           SizedBox(height: .5.h),
           if (errorCheck)
@@ -61,12 +62,12 @@ class _PageState extends State<loginPage> {
               Icon(
                 Icons.warning_rounded,
                 color: Colors.red,
-                size: 18,
+                size: 16,
               ),
               SizedBox(width: 1.h),
               Text(
                 errorMessage,
-                style: TextStyle(
+                style: GoogleFonts.montserrat(
                     color: Colors.red,
                     fontWeight: FontWeight.w500,
                     fontSize: 14.sp),
@@ -80,23 +81,24 @@ class _PageState extends State<loginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        constraints: BoxConstraints.expand(),
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("assets/images/bg2.png"), fit: BoxFit.fill),
-        ),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Container(
+          constraints: BoxConstraints.expand(),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/bg2.png"),
+                fit: BoxFit.fitWidth),
+          ),
           child: Padding(
             padding: EdgeInsets.only(top: 30),
             child: Column(
               children: [
                 Text(
                   "NIGHTLY",
-                  style: TextStyle(
+                  style: GoogleFonts.montserrat(
                     color: Color(0xff1E3A77),
-                    fontSize: 26.sp,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 Row(
@@ -113,17 +115,21 @@ class _PageState extends State<loginPage> {
                     SizedBox(width: 10.sp),
                     Text(
                       "W H A T ' S",
-                      style: TextStyle(
-                          color: Color(0xffE4B922),
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w400),
+                      style: GoogleFonts.montserrat(
+                        color: Color(0xffE4B922),
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                     SizedBox(width: 1.w),
-                    Text("U P ?",
-                        style: TextStyle(
-                            color: Color(0xffE4B922),
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w400))
+                    Text(
+                      "U P ?",
+                      style: GoogleFonts.montserrat(
+                        color: Color(0xffE4B922),
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    )
                   ],
                 ),
                 SizedBox(height: 10.h),
@@ -132,9 +138,9 @@ class _PageState extends State<loginPage> {
                     Padding(padding: EdgeInsets.all(20)),
                     Text(
                       "Welcome Back",
-                      style: TextStyle(
+                      style: GoogleFonts.montserrat(
                         fontSize: 20.sp,
-                        fontWeight: FontWeight.w700,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ],
@@ -164,8 +170,8 @@ class _PageState extends State<loginPage> {
                     children: [
                       Text(
                         "Forget password?",
-                        style: TextStyle(
-                            fontSize: 16.sp, fontWeight: FontWeight.w500),
+                        style: GoogleFonts.montserrat(
+                            fontSize: 15.sp, fontWeight: FontWeight.w600),
                       ),
                     ],
                   ),
@@ -205,12 +211,10 @@ class _PageState extends State<loginPage> {
                     ),
                     child: Text(
                       "Login",
-                      style: TextStyle(
-                          color: Color(
-                            0xffFFFFFF,
-                          ),
-                          fontWeight: FontWeight.w500,
-                          fontSize: 18.sp),
+                      style: GoogleFonts.montserrat(
+                          color: Color(0xffFFFFFF),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 17.5.sp),
                     ),
                   ),
                 ),
@@ -220,22 +224,20 @@ class _PageState extends State<loginPage> {
                   children: [
                     Text(
                       "Don't have an account?",
-                      style: TextStyle(
-                          fontSize: 16.5.sp, fontWeight: FontWeight.w400),
+                      style: GoogleFonts.montserrat(
+                          fontSize: 15.sp, fontWeight: FontWeight.w500),
                     ),
-                    SizedBox(width: 1.w),
+                    SizedBox(width: .5.w),
                     InkWell(
                       onTap: () {
                         Get.to(signup2Page());
                       },
-                      child: Text(
-                        "Signup",
-                        style: TextStyle(
-                          fontSize: 16.5.sp,
-                          fontWeight: FontWeight.w600,
-                          decoration: TextDecoration.underline,
-                        ),
-                      ),
+                      child: Text("Signup",
+                          style: GoogleFonts.montserrat(
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w700,
+                            decoration: TextDecoration.underline,
+                          )),
                     )
                   ],
                 ),
@@ -261,10 +263,11 @@ class _PageState extends State<loginPage> {
                       SizedBox(width: 2.h),
                       Text(
                         "Continue with Google",
-                        style: TextStyle(
-                            color: Color(0xff202020),
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18.sp),
+                        style: GoogleFonts.montserrat(
+                          color: Color(0xff202020),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 17.sp,
+                        ),
                       ),
                     ],
                   ),
