@@ -49,7 +49,7 @@ class _PageState extends State<Task02A> {
                         onTap: () {
                           Get.to(Task02B());
                         },
-                        child: customcontainer("food.png", "Establishment")),
+                        child: customcontainer("food.png", "Establishment"))
                   ]),
                   SizedBox(height: 3.6.h),
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -57,14 +57,13 @@ class _PageState extends State<Task02A> {
                         fontsize: 13.5.sp),
                     SizedBox(width: .5.w),
                     InkWell(
-                      onTap: () {
-                        Get.to(Task02B());
-                      },
-                      child: customtextwithmonteserrat("Log In",
-                          fontWeight: FontWeight.w700,
-                          fontsize: 13.5.sp,
-                          textDecoration: TextDecoration.underline),
-                    )
+                        onTap: () {
+                          Get.to(Task02B());
+                        },
+                        child: customtextwithmonteserrat("Log In",
+                            fontWeight: FontWeight.w700,
+                            fontsize: 13.5.sp,
+                            textDecoration: TextDecoration.underline))
                   ])
                 ]))));
   }

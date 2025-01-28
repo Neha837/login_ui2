@@ -83,7 +83,7 @@ class _Task08BState extends State<Task08B> {
                                     "Mon-Fri", "40% off on each deal"),
                                 SizedBox(width: .5.w),
                                 cutomexplorewidget("mangla.png", "Jose & Rides",
-                                    "Mon-Fri", "30% off on all rides"),
+                                    "Mon-Fri", "30% off on all rides")
                               ]))),
                   Padding(
                       padding:
@@ -94,11 +94,8 @@ class _Task08BState extends State<Task08B> {
                         Spacer(),
                         textwithopensans("Show all", fontsize: 14.5.sp),
                         SizedBox(width: 1.5.w),
-                        Icon(
-                          Icons.arrow_forward_ios,
-                          size: 2.h,
-                          color: Color(0xff240707),
-                        )
+                        Icon(Icons.arrow_forward_ios,
+                            size: 2.h, color: Color(0xff240707))
                       ])),
                   SingleChildScrollView(
                       scrollDirection: Axis.horizontal,

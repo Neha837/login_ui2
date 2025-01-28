@@ -388,7 +388,7 @@ class _Task05AState extends State<Task05A> {
                                     textwidget("Cookies",
                                         fontsize: 15.sp,
                                         color: Colors.black,
-                                        fontWeight: FontWeight.bold),
+                                        fontWeight: FontWeight.bold)
                                   ]))),
                       SizedBox(height: 3.h),
                       Container(

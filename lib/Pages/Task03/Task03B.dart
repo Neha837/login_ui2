@@ -122,9 +122,8 @@ class _PageState extends State<Task03B> {
                                       decoration: BoxDecoration(
                                           color: Color(0xff1F2126),
                                           borderRadius: BorderRadius.only(
-                                            topLeft: Radius.circular(30),
-                                            topRight: Radius.circular(30),
-                                          )),
+                                              topLeft: Radius.circular(30),
+                                              topRight: Radius.circular(30))),
                                       child: Padding(
                                           padding: EdgeInsets.all(8.0),
                                           child: Row(children: [
@@ -154,15 +153,15 @@ class _PageState extends State<Task03B> {
                                                                       height:
                                                                           1.h),
                                                                   Container(
-                                                                    height:
-                                                                        .5.h,
-                                                                    width: 9.w,
-                                                                    decoration: BoxDecoration(
-                                                                        color: Color(
-                                                                            0xff1F2126),
-                                                                        borderRadius:
-                                                                            BorderRadius.all(Radius.circular(5))),
-                                                                  ),
+                                                                      height:
+                                                                          .5.h,
+                                                                      width:
+                                                                          9.w,
+                                                                      decoration: BoxDecoration(
+                                                                          color: Color(
+                                                                              0xff1F2126),
+                                                                          borderRadius:
+                                                                              BorderRadius.all(Radius.circular(5)))),
                                                                   SizedBox(
                                                                       height:
                                                                           3.h),
@@ -201,7 +200,7 @@ class _PageState extends State<Task03B> {
                                                                               })))),
                                                                   SizedBox(
                                                                       height:
-                                                                          3.h),
+                                                                          3.h)
                                                                 ]));
                                                       });
                                                 },

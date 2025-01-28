@@ -64,50 +64,43 @@ class _PageState extends State<Task03A> {
                                           padding: EdgeInsets.only(
                                               top: 3.h, left: 3.h, right: 3.h),
                                           child: TextField(
-                                            autocorrect: false,
-                                            style: TextStyle(
-                                                color: Color(0xffFFFFFF)),
-                                            decoration: InputDecoration(
-                                                constraints: BoxConstraints(
-                                                    maxHeight: 6.h),
-                                                filled: true,
-                                                fillColor: Color(0xff292B31),
-                                                hintText: "Search here",
-                                                hintStyle: GoogleFonts.poppins(
-                                                    color: Color(0xff8F8F8F),
-                                                    fontSize: 15.sp,
-                                                    fontWeight: FontWeight
-                                                        .w500),
-                                                border: OutlineInputBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            12),
-                                                    borderSide:
-                                                        BorderSide.none),
-                                                focusedBorder:
-                                                    OutlineInputBorder(
-                                                        borderSide:
-                                                            BorderSide.none,
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(12)),
-                                                prefixIcon: Icon(Icons.search,
-                                                    size: 20,
-                                                    color: Color(0xff8F8F8F)),
-                                                contentPadding:
-                                                    EdgeInsets.symmetric(
-                                                        vertical: 15)),
-                                          )),
+                                              autocorrect: false,
+                                              style: TextStyle(
+                                                  color: Color(0xffFFFFFF)),
+                                              decoration: InputDecoration(
+                                                  constraints: BoxConstraints(
+                                                      maxHeight: 6.h),
+                                                  filled: true,
+                                                  fillColor: Color(0xff292B31),
+                                                  hintText: "Search here",
+                                                  hintStyle: GoogleFonts.poppins(
+                                                      color: Color(0xff8F8F8F),
+                                                      fontSize: 15.sp,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                                  border: OutlineInputBorder(
+                                                      borderRadius: BorderRadius.circular(
+                                                          12),
+                                                      borderSide:
+                                                          BorderSide.none),
+                                                  focusedBorder: OutlineInputBorder(
+                                                      borderSide:
+                                                          BorderSide.none,
+                                                      borderRadius: BorderRadius.circular(
+                                                          12)),
+                                                  prefixIcon: Icon(Icons.search,
+                                                      size: 20,
+                                                      color: Color(0xff8F8F8F)),
+                                                  contentPadding: EdgeInsets.symmetric(vertical: 15)))),
                                       SizedBox(height: .5.h),
                                       Expanded(
                                           child: ListView(children: [
                                         InkWell(
-                                          onTap: () {
-                                            Get.to(Task03B());
-                                          },
-                                          child: listtile("Yusuf Aziz",
-                                              "@yusufaziz", "pic1.png"),
-                                        ),
+                                            onTap: () {
+                                              Get.to(Task03B());
+                                            },
+                                            child: listtile("Yusuf Aziz",
+                                                "@yusufaziz", "pic1.png")),
                                         listtile("Azhar Cemal", "@azharcemal",
                                             "pic2.png"),
                                         listtile("Damiam Asim", "@damiamasim",

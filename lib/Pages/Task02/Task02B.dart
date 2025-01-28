@@ -69,7 +69,7 @@ class _PageState extends State<Task02B> {
                                 customtextwithmonteserrat("Forget password?",
                                     fontsize: 15.sp,
                                     fontWeight: FontWeight.w600,
-                                    color: Color(0xff0D0D0D)),
+                                    color: Color(0xff0D0D0D))
                               ])),
                       SizedBox(height: 7.h),
                       buttonwidget("Login", () {
@@ -96,15 +96,14 @@ class _PageState extends State<Task02B> {
                                 color: Color(0xff3C3939)),
                             SizedBox(width: .5.w),
                             InkWell(
-                              onTap: () {
-                                Get.to(Task02C());
-                              },
-                              child: customtextwithmonteserrat("Signup",
-                                  fontsize: 15.sp,
-                                  fontWeight: FontWeight.w700,
-                                  textDecoration: TextDecoration.underline,
-                                  color: Color(0xff3C3939)),
-                            )
+                                onTap: () {
+                                  Get.to(Task02C());
+                                },
+                                child: customtextwithmonteserrat("Signup",
+                                    fontsize: 15.sp,
+                                    fontWeight: FontWeight.w700,
+                                    textDecoration: TextDecoration.underline,
+                                    color: Color(0xff3C3939)))
                           ]),
                       SizedBox(height: 6.h),
                       Container(

@@ -26,14 +26,13 @@ class _Task05BState extends State<Task05B> {
   TextEditingController _password = TextEditingController();
 
   Widget textfield(String hint, TextEditingController controller) {
-    return Column(
-      children: [
-        TextField(
-            controller: controller,
-            onChanged: (_) {
-              setState(() {});
-            },
-            decoration: InputDecoration(
+    return Column(children: [
+      TextField(
+          controller: controller,
+          onChanged: (_) {
+            setState(() {});
+          },
+          decoration: InputDecoration(
               filled: true,
               fillColor: Color(0xffF2F2F2),
               hintText: hint,
@@ -47,10 +46,8 @@ class _Task05BState extends State<Task05B> {
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide.none),
-              contentPadding: EdgeInsets.only(left: 3.h),
-            ))
-      ],
-    );
+              contentPadding: EdgeInsets.only(left: 3.h)))
+    ]);
   }
 
   @override

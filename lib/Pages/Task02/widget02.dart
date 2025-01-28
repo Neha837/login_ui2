@@ -24,24 +24,23 @@ Widget field(String hint, TextEditingController controller, bool errorCheck,
         controller: controller,
         obscureText: isPasswordshow,
         decoration: InputDecoration(
-          prefixIcon: Icon(icon, color: Color(0xff002065), size: 3.h),
-          filled: true,
-          fillColor: Colors.white,
-          hintText: hint,
-          hintStyle: GoogleFonts.montserrat(
-              color: Color(0xff8E8E8E),
-              fontSize: 15.5.sp,
-              fontWeight: FontWeight.w400),
-          focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: Color(0xff002065))),
-          enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(
-                  color: !errorCheck ? Color(0xffBFBFBF) : Colors.red)),
-          contentPadding:
-              EdgeInsets.only(top: 2.h, left: 2.5.h, bottom: 2.h, right: 2.h),
-        )),
+            prefixIcon: Icon(icon, color: Color(0xff002065), size: 3.h),
+            filled: true,
+            fillColor: Colors.white,
+            hintText: hint,
+            hintStyle: GoogleFonts.montserrat(
+                color: Color(0xff8E8E8E),
+                fontSize: 15.5.sp,
+                fontWeight: FontWeight.w400),
+            focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: Color(0xff002065))),
+            enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                    color: !errorCheck ? Color(0xffBFBFBF) : Colors.red)),
+            contentPadding: EdgeInsets.only(
+                top: 2.h, left: 2.5.h, bottom: 2.h, right: 2.h))),
     SizedBox(height: .5.h),
     if (errorCheck)
       Row(children: [
@@ -87,9 +86,7 @@ Widget buttonwidget(String text, Function fun) {
           decoration: BoxDecoration(
               shape: BoxShape.rectangle,
               color: Color(0xff002065),
-              borderRadius: BorderRadius.all(
-                Radius.circular(10),
-              )),
+              borderRadius: BorderRadius.all(Radius.circular(10))),
           child: Text(text,
               style: GoogleFonts.montserrat(
                   color: Color(0xffFFFFFF),

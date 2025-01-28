@@ -47,10 +47,9 @@ Widget chattingwidget({
                         bottomRight: Radius.circular(0),
                         bottomLeft: Radius.circular(20))),
                 child: Padding(
-                  padding: EdgeInsets.all(12),
-                  child: customtextwithpoppins(message,
-                      fontsize: 15.sp, fontWeight: FontWeight.w400),
-                )),
+                    padding: EdgeInsets.all(12),
+                    child: customtextwithpoppins(message,
+                        fontsize: 15.sp, fontWeight: FontWeight.w400))),
         if (!isMe)
           Container(child: Image.asset("assets/images/pic1.png", height: 7.h)),
         if (!isMe) SizedBox(width: 3.w),
@@ -66,10 +65,9 @@ Widget chattingwidget({
                         bottomRight: Radius.circular(20),
                         bottomLeft: Radius.circular(0))),
                 child: Padding(
-                  padding: EdgeInsets.all(12),
-                  child: customtextwithpoppins(message,
-                      fontsize: 15.sp, fontWeight: FontWeight.w400),
-                )),
+                    padding: EdgeInsets.all(12),
+                    child: customtextwithpoppins(message,
+                        fontsize: 15.sp, fontWeight: FontWeight.w400))),
         if (image != "")
           Container(
               height: 18.h,

@@ -29,9 +29,8 @@ class _PageState extends State<Task01A> {
               decoration: BoxDecoration(
                   color: Color(0xff1F2126),
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30),
-                  )),
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30))),
               child: Column(children: [
                 Padding(padding: EdgeInsets.all(25)),
                 customsignupbutton("Sign Up with Email", () {
@@ -41,26 +40,23 @@ class _PageState extends State<Task01A> {
                 customtextwidget("Or Sign Up with", color: Colors.white70),
                 SizedBox(height: 3.h),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    customsocialmediabutton("assets/icons/apple.png", () {}),
-                    customsocialmediabutton("assets/icons/twitter.png", () {}),
-                    customsocialmediabutton("assets/icons/google.png", () {})
-                  ],
-                ),
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      customsocialmediabutton("assets/icons/apple.png", () {}),
+                      customsocialmediabutton(
+                          "assets/icons/twitter.png", () {}),
+                      customsocialmediabutton("assets/icons/google.png", () {})
+                    ]),
                 SizedBox(height: 7.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    customtextwidget("Already have an account?",
-                        color: Colors.white70, fontWeight: FontWeight.w500),
-                    SizedBox(width: 1.w),
-                    customtextwidget("Sign in now",
-                        color: Color(0xff5385E5),
-                        fontWeight: FontWeight.w500,
-                        textdecoration: TextDecoration.underline),
-                  ],
-                )
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  customtextwidget("Already have an account?",
+                      color: Colors.white70, fontWeight: FontWeight.w500),
+                  SizedBox(width: 1.w),
+                  customtextwidget("Sign in now",
+                      color: Color(0xff5385E5),
+                      fontWeight: FontWeight.w500,
+                      textdecoration: TextDecoration.underline)
+                ])
               ]))
         ]));
   }

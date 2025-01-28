@@ -8,15 +8,13 @@ Widget customtextwidget(String text,
     TextAlign? textAlign,
     Color? color,
     TextDecoration? textdecoration}) {
-  return Text(
-    text,
-    textAlign: textAlign,
-    style: GoogleFonts.poppins(
-        fontSize: fontsize ?? 14.sp,
-        fontWeight: fontWeight ?? FontWeight.w400,
-        color: color ?? Color(0xffFFFFFF),
-        decoration: textdecoration ?? TextDecoration.none),
-  );
+  return Text(text,
+      textAlign: textAlign,
+      style: GoogleFonts.poppins(
+          fontSize: fontsize ?? 14.sp,
+          fontWeight: fontWeight ?? FontWeight.w400,
+          color: color ?? Color(0xffFFFFFF),
+          decoration: textdecoration ?? TextDecoration.none));
 }
 
 Widget customsignupbutton(String text, Function ontap) {
@@ -34,13 +32,11 @@ Widget customsignupbutton(String text, Function ontap) {
               color: Color(0xff31D8E3),
               borderRadius: BorderRadius.all(Radius.circular(15))),
           child: Center(
-              child: Text(
-            text,
-            style: GoogleFonts.poppins(
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w600,
-                color: Colors.white),
-          ))));
+              child: Text(text,
+                  style: GoogleFonts.poppins(
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white)))));
 }
 
 Widget customsocialmediabutton(String imgPath, Function fun) {

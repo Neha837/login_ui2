@@ -170,7 +170,7 @@ class _Task07BState extends State<Task07B> {
                       fontWeight: FontWeight.bold, fontsize: 14.sp),
                   Spacer(),
                   textwidget2("Time",
-                      fontWeight: FontWeight.bold, fontsize: 14.sp),
+                      fontWeight: FontWeight.bold, fontsize: 14.sp)
                 ]),
                 SizedBox(height: 2.w),
                 SizedBox(

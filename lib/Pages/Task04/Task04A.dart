@@ -92,20 +92,19 @@ class _Task04AState extends State<Task04A> {
                         Get.to(Task04B());
                       },
                       child: Container(
-                        height: 7.h,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            gradient: LinearGradient(
-                                begin: Alignment.centerLeft,
-                                end: Alignment.centerRight,
-                                colors: [
-                                  Color(0xffE5324E),
-                                  Color(0xff588AFF)
-                                ])),
-                        child: textwithpoppins("Show me Established Members",
-                            color: Color(0xffFFFFFF), fontsize: 16.sp),
-                      ))
+                          height: 7.h,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              gradient: LinearGradient(
+                                  begin: Alignment.centerLeft,
+                                  end: Alignment.centerRight,
+                                  colors: [
+                                    Color(0xffE5324E),
+                                    Color(0xff588AFF)
+                                  ])),
+                          child: textwithpoppins("Show me Established Members",
+                              color: Color(0xffFFFFFF), fontsize: 16.sp)))
                 ]))));
   }
 }

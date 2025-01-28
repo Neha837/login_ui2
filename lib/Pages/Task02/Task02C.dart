@@ -88,7 +88,7 @@ class _PageState extends State<Task02C> {
                                     "Enter your password again",
                                     Icons.lock_outline,
                                     true),
-                                SizedBox(height: 3.h),
+                                SizedBox(height: 3.h)
                               ])),
                           Row(children: [
                             Padding(padding: EdgeInsets.only(left: 10)),

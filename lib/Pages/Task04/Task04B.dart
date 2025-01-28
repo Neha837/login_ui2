@@ -34,7 +34,7 @@ class _Task04BState extends State<Task04B> {
                         SizedBox(width: 5.w),
                         Image.asset("assets/images/v2.png", height: 2.2.h),
                         SizedBox(width: 5.w),
-                        Image.asset("assets/images/v3.png", height: 2.2.h),
+                        Image.asset("assets/images/v3.png", height: 2.2.h)
                       ])),
                   Padding(
                       padding: EdgeInsets.only(
@@ -69,8 +69,7 @@ class _Task04BState extends State<Task04B> {
                         Container(
                             height: .3.h,
                             width: 30.w,
-                            decoration:
-                                BoxDecoration(color: Color(0xff5276D4))),
+                            decoration: BoxDecoration(color: Color(0xff5276D4)))
                       ])),
                   SizedBox(height: 2.h),
                   Padding(
